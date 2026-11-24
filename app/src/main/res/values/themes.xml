@@ -1,3 +1,5 @@
 <resources>
-    <style name="Theme.Orion" parent="android:Theme.Material.Light.NoActionBar" />
+    <style name="Theme.Orion" parent="android:Theme.Material.NoActionBar">
+        <item name="android:windowBackground">@color/orion_background</item>
+    </style>
 </resources>

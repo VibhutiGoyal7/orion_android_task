@@ -2,7 +2,9 @@ package com.vibhuti.orion.di
 
 import com.vibhuti.orion.BuildConfig
 import com.vibhuti.orion.data.remote.ApiService
+import com.vibhuti.orion.data.repository.InsightsRepository
 import com.vibhuti.orion.data.repository.ItemRepository
+import com.vibhuti.orion.data.repository.MockInsightsRepository
 import com.vibhuti.orion.data.repository.ItemRepositoryImpl
 import kotlinx.serialization.json.Json
 import okhttp3.MediaType.Companion.toMediaType
@@ -31,4 +33,6 @@ class AppContainer(baseUrl: String = "https://jsonplaceholder.typicode.com/") {
         .create(ApiService::class.java)
 
     val itemRepository: ItemRepository = ItemRepositoryImpl(api)
+
+    val insightsRepository: InsightsRepository = MockInsightsRepository()
 }
